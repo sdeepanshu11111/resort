@@ -6199,7 +6199,7 @@ html {
       width: 100%;
     }
   
-    .span-text.dash, .span-text.is-1, .span-text.is-2, .span-text.is-3, .span-text.is-4, .span-text.is-5, .span-text.is-6, .span-text.is-7, .span-text.loader, .span-text.intro-dash {
+    .span-text.dash, .span-text.is-1, .span-text.is-2, .span-text.is-3, .span-text.is-4, .span-text.is-5, .span-text.is-6, .span-text.is-7 .span-text.is-8, .span-text.is-9, .span-text.is-10, .span-text.is-11, .span-text.is-12, .span-text.loader, .span-text.intro-dash {
       font-size: 10vw;
     }
   
@@ -6747,7 +6747,7 @@ html {
       font-size: 14vw;
     }
   
-    .span-text.is-1, .span-text.is-2, .span-text.is-3, .span-text.is-4, .span-text.is-5, .span-text.is-6, .span-text.is-7, .span-text.loader {
+    .span-text.is-1, .span-text.is-2, .span-text.is-3, .span-text.is-4, .span-text.is-5, .span-text.is-6, .span-text.is-7, .span-text.is-8, .span-text.is-9, .span-text.is-10, .span-text.is-11, .span-text.is-12, .span-text.loader {
       font-size: 14vw;
     }
   
