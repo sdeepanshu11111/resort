@@ -1,0 +1,259 @@
+/* Make text look crisper and more legible in all browsers */
+body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+}
+
+.alma-nac_main-logo {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+
+}
+
+/* Focus state style for keyboard navigation for the focusable elements */
+*[tabindex]:focus-visible, input[type="file"]:focus-visible {
+    outline: 0.125rem solid #4d65ff;
+    outline-offset: 0.125rem;
+}
+
+/* Get rid of horizontal scrollbar */
+::-webkit-scrollbar {
+    width: 0;
+    display: none !important;
+}
+
+html, body {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+}
+
+/* Remove top margin on first element and bottom margin on last element in any rich text element */
+.w-richtext > :not(div):first-child, .w-richtext > div:first-child > :first-child {
+    margin-top: 0 !important;
+}
+
+.w-richtext > :last-child, .w-richtext ol li:last-child, .w-richtext ul li:last-child {
+    margin-bottom: 0 !important;
+}
+
+/* Pointer events */
+.pointer-events-off {
+    pointer-events: none;
+}
+
+.pointer-events-on {
+    pointer-events: auto;
+}
+
+/* Maintain 1:1 aspect ratio for a div */
+.div-square::after {
+    content: "";
+    display: block;
+    padding-bottom: 100%;
+}
+
+/* Center align containers */
+.container-medium, .container-small, .container-large {
+    margin-right: auto !important;
+    margin-left: auto !important;
+}
+
+/* Text truncation */
+.text-style-3lines {
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+}
+
+.text-style-2lines {
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
+/* Inline flex display */
+.display-inlineflex {
+    display: inline-flex;
+}
+
+/* Hide elements */
+.hide {
+    display: none !important;
+}
+
+/* Responsive visibility */
+@media screen and (max-width: 991px) {
+    .hide, .hide-tablet {
+        display: none !important;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .hide-mobile-landscape {
+        display: none !important;
+    }
+}
+
+@media screen and (max-width: 479px) {
+    .hide-mobile {
+        display: none !important;
+    }
+}
+
+/* Zero margin and padding */
+.margin-0, .padding-0, .spacing-clean {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+/* Individual zero margin and padding directions */
+.margin-top { margin-top: 0 !important; }
+.margin-right { margin-right: 0 !important; }
+.margin-bottom { margin-bottom: 0 !important; }
+.margin-left { margin-left: 0 !important; }
+
+.padding-top { padding-top: 0 !important; }
+.padding-right { padding-right: 0 !important; }
+.padding-bottom { padding-bottom: 0 !important; }
+.padding-left { padding-left: 0 !important; }
+
+/* Zero margin and padding for horizontal and vertical directions */
+.margin-horizontal {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+}
+.padding-horizontal {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+.margin-vertical {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+}
+.padding-vertical {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+}
+
+/* Custom cursor */
+.cursor {
+    pointer-events: none;
+    opacity: 0;
+}
+
+@media (pointer: fine) {
+    body:hover .cursor {
+        opacity: 1;
+    }
+}
+
+/* Custom grid attribute */
+@media screen and (min-width: 768px) {
+    [item-style="wide"] {
+        grid-column: span 2;
+        grid-row: span 1;
+    }
+    [item-style="tall"] {
+        grid-column: span 1;
+        grid-row: span 2;
+    }
+}
+
+
+.cta-button {
+    margin-top: 12px;
+    display: inline-block;
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #ffffff; /* White text for contrast */
+    background-color: #A23D2E; /* Terracotta/muted red tone */
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+}
+
+.cta-button:hover {
+    background-color: #8A3328; /* Darker shade for hover effect */
+    opacity: 0.9;
+}
+
+
+.carousel {
+    position: relative;
+    width: 80%;
+    max-width: 800px;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.carousel-container {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.carousel-slide {
+    min-width: 100%;
+    height: 400px;
+    display: flex;
+    align-items: flex-end;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.carousel-content {
+    width: 100%;
+    padding: 20px;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.6);
+    text-align: left;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    font-size: 1.2rem;
+}
+
+.carousel-content h2 {
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+}
+
+.carousel-content p {
+    font-size: 1rem;
+    margin-top: 5px;
+}
+
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    border: none;
+    font-size: 2rem;
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.prev-btn {
+    left: 10px;
+}
+
+.next-btn {
+    right: 10px;
+}
+
+.carousel-btn:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
